@@ -10,22 +10,21 @@
 
   <!-- IMPORTANT: Tailwind config must come BEFORE the CDN script -->
   <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            "miyama-navy": "#0A2342",
-            "miyama-cream": "#F9F7F2",
-            "miyama-slate": "#4A5568",
-            "miyama-gold": "#C5A065",
-          },
-          boxShadow: { subtle: "0 18px 45px rgba(10, 35, 66, 0.12)" },
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          "miyama-navy": "#0A2342",
+          "miyama-cream": "#F9F7F2",
+          "miyama-slate": "#4A5568",
+          "miyama-gold": "#C5A065",
         },
+        boxShadow: { subtle: "0 18px 45px rgba(10, 35, 66, 0.12)" },
       },
-    };
-    localStorage.setItem("miyama-lang", "zh");
-  </script>
-  <script src="https://cdn.tailwindcss.com"></script>
+    },
+  };
+</script>
+<script src="https://cdn.tailwindcss.com"></script>
 
   <style>
     body { font-family: "Inter", system-ui, sans-serif; }
