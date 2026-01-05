@@ -218,7 +218,23 @@
       </a>
     </div>
 
-    <p class="mt-8 text-[11px] text-gray-500">© 2025 Miyama Capital. 版權所有。</p>
+    <div class="footer-legal" style="max-width: 980px; margin: 16px auto 0; font-size: 12px; line-height: 1.5; opacity: 0.85;">
+  <p style="margin: 0 0 8px;">
+    <strong>免責聲明與風險揭露：</strong>Miyama Capital LLC 為加州有限責任公司（LLC）。本公司目前僅以自有資金運作，不對外募集或管理外部資金。本網站內容僅供資訊參考，不構成投資建議，亦非任何證券或投資產品之要約或招攬。過去績效不代表未來結果；投資具有風險，可能損失部分或全部本金。
+    <a href="/zh/disclosures.html" style="text-decoration: underline;">完整揭露</a>。
+  </p>
+
+  <p style="margin: 0;">
+    &copy; <span id="footer-year"></span> Miyama Capital LLC. All Rights Reserved.
+  </p>
+</div>
+
+<script>
+  (function () {
+    var el = document.getElementById('footer-year');
+    if (el) el.textContent = new Date().getFullYear();
+  })();
+</script>
   </footer>
 </body>
 </html>
