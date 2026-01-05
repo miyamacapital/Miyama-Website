@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Redirecting...</title>
+  <title>Miyama Capital</title> 
+  <link rel="icon" type="image/png" href="../web_images/Logo2.png">
+  
   <script>
     const savedLang = localStorage.getItem("miyama-lang");
     const browserLang = navigator.language || navigator.userLanguage;
     const isChinese = browserLang.toLowerCase().startsWith("zh");
 
-    // 為了讓本機檔案 (file://) 也能運作，這裡加上 index.html
     let target = "en/index.html"; 
 
     if (savedLang === "zh") {
