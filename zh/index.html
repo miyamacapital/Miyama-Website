@@ -52,17 +52,17 @@
       h3,
       h4 {
         font-family: "Playfair Display", "Noto Serif TC", serif !important;
-        letter-spacing: 0.02em; /* 跟英文版一致 */
+        letter-spacing: 0.02em;
       }
 
       h1 {
-        font-weight: 700 !important; /* 跟英文版一致 */
+        font-weight: 700 !important;
       }
     </style>
   </head>
 
   <body class="bg-miyama-cream text-miyama-slate antialiased">
-    <!-- ✅ FIX: header fills full viewport height to avoid bottom white gap -->
+    <!-- ✅ FIX: header fills viewport height (no white gap) -->
     <header class="relative bg-miyama-navy text-white min-h-screen flex flex-col">
       <div
         class="pointer-events-none absolute inset-0 opacity-20 mix-blend-screen"
@@ -86,13 +86,10 @@
         <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 md:px-6">
           <div class="flex items-center gap-3">
             <img src="../web_images/Logo2.png" alt="Miyama Capital" class="h-9 w-auto" />
-            <div class="hidden text-xs uppercase tracking-[0.2em] md:block">
-              Miyama Capital
-            </div>
+            <div class="hidden text-xs uppercase tracking-[0.2em] md:block">Miyama Capital</div>
           </div>
 
           <div class="flex items-center gap-4">
-            <!-- Desktop nav links -->
             <div class="hidden items-center gap-8 text-sm md:flex">
               <a href="#philosophy" class="text-gray-300 hover:text-white">投資哲學</a>
               <a href="#founder" class="text-gray-300 hover:text-white">創辦人觀點</a>
@@ -120,7 +117,6 @@
                 </svg>
               </a>
 
-              <!-- Primary CTA -->
               <a
                 href="mailto:info@miyamacap.com?subject=Miyama%20Capital%20LLC%20%E2%80%93%20%E4%B8%80%E8%B5%B7%E8%81%8A%E8%81%8A&body=%E6%82%A8%E5%A5%BD%EF%BC%8CMiyama%20%E5%9C%98%E9%9A%8A%EF%BC%9A%0A%0A%E6%88%91%E5%B8%8C%E6%9C%9B%E5%B0%B1%EF%BC%9A%5B%E7%A0%94%E7%A9%B6%E5%90%88%E4%BD%9C%20%2F%20%E7%AD%96%E7%95%A5%E4%BA%A4%E6%B5%81%20%2F%20%E5%90%88%E4%BD%9C%E5%A4%A5%E4%BC%B4%20%2F%20%E4%BA%BA%E6%89%8D%20%2F%20%E5%85%B6%E4%BB%96%5D%0A%0A%E5%A7%93%E5%90%8D%EF%BC%9A%0A%E5%96%AE%E4%BD%8D%EF%BC%9A%0A%0A%E8%AC%9D%E8%AC%9D%EF%BC%8C"
                 class="rounded-full bg-white px-4 py-1.5 text-xs font-medium tracking-normal text-miyama-navy shadow-subtle transition hover:-translate-y-0.5 hover:bg-miyama-cream"
@@ -129,7 +125,6 @@
               </a>
             </div>
 
-            <!-- Mobile-only CTA -->
             <a
               href="mailto:info@miyamacap.com?subject=Miyama%20Capital%20LLC%20%E2%80%93%20%E4%B8%80%E8%B5%B7%E8%81%8A%E8%81%8A"
               class="md:hidden rounded-full border border-white/30 px-3 py-1.5 text-xs font-medium tracking-wide text-gray-200 hover:bg-white hover:text-miyama-navy"
@@ -137,10 +132,7 @@
               聯絡
             </a>
 
-            <!-- Language toggle -->
-            <div
-              class="flex items-center gap-1 rounded-full border border-white/30 bg-white/5 px-1 py-0.5 text-[11px]"
-            >
+            <div class="flex items-center gap-1 rounded-full border border-white/30 bg-white/5 px-1 py-0.5 text-[11px]">
               <a
                 href="../en/index.html"
                 class="rounded-full px-2 py-1 font-medium tracking-wide text-gray-300 hover:text-white"
@@ -159,7 +151,6 @@
       </nav>
 
       <!-- Hero -->
-      <!-- ✅ FIX: flex-1 + justify-center so header always fills screen -->
       <div
         class="relative z-10 mx-auto flex w-full max-w-6xl flex-1 flex-col items-center justify-center px-4 py-16 text-center md:px-6 md:py-24"
       >
@@ -168,32 +159,26 @@
             Miyama Capital
           </p>
 
-          <!-- Headline: 2 lines, second line in gold -->
           <div class="text-center">
             <h1 class="text-white font-serif text-4xl md:text-6xl font-medium tracking-wide leading-tight mb-2 md:mb-4">
               地緣經濟宏觀
             </h1>
-
             <h1 class="text-[#C5A572] font-serif text-4xl md:text-6xl font-medium tracking-wide leading-tight">
               跨資產配置
             </h1>
           </div>
 
-          <!-- Description -->
           <p class="mt-8 md:mt-10 text-gray-300 text-sm md:text-lg font-light tracking-wide leading-relaxed max-w-2xl mx-auto opacity-90">
             <span class="font-medium text-gray-100">不對稱風險回報</span>，以市場狀態為框架。
             <br class="hidden md:block" />以制度化風控，動態管理曝險。
           </p>
 
-          <!-- Scope line -->
           <p class="mx-auto mb-6 max-w-2xl text-xs text-gray-300 md:text-sm text-center">
             全球佈局｜核心：美／台／日
           </p>
 
-          <!-- Divider -->
           <div class="mx-auto mb-8 h-0.5 w-20 bg-miyama-gold/60 md:mb-10"></div>
 
-          <!-- Primary CTA -->
           <div class="flex flex-col items-center justify-center gap-4 md:flex-row">
             <a
               href="https://vocus.cc/salon/miyama-capital"
@@ -202,25 +187,13 @@
               class="rounded-full bg-white px-8 py-2.5 text-sm font-medium text-miyama-navy shadow-subtle transition hover:-translate-y-0.5 hover:bg-miyama-cream flex items-center gap-2"
             >
               閱讀備忘錄
-              <svg
-                class="w-3 h-3"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M14 5l7 7m0 0l-7 7m7-7H3"
-                ></path>
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
               </svg>
             </a>
           </div>
         </div>
 
-        <!-- Scroll hint -->
         <div class="mt-12 flex items-center gap-2 text-xs text-gray-300">
           <span>下滑</span>
           <span class="h-7 w-[1px] bg-gray-500"></span>
@@ -229,68 +202,86 @@
     </header>
 
     <main>
-      <section id="philosophy" class="mx-auto max-w-6xl px-4 py-16 md:px-6 md:py-24">
-        <div class="mb-14 text-center">
-          <h2 class="mb-3 text-3xl font-semibold text-miyama-navy md:text-4xl">
-            Miyama 投資哲學
-          </h2>
-          <p class="text-sm font-medium tracking-[0.25em] text-miyama-slate/70">投資哲學</p>
-          <p class="mx-auto mt-4 max-w-2xl text-sm text-miyama-slate md:text-base">
-            結合主觀宏觀框架與量化紀律，追求長期複利，而非短期英雄式表現。
-          </p>
-        </div>
+      <!-- ✅ 已替換：中文版 Philosophy 改成英文版同款「雜誌三欄」 -->
+      <section id="philosophy" class="py-24 bg-[#F9F9F7] text-[#0B1C38]">
+        <div class="max-w-6xl mx-auto px-6">
+          <div class="text-center mb-20">
+            <h2 class="font-serif text-4xl md:text-5xl mb-4 text-[#0B1C38] tracking-tight">
+              Miyama 投資哲學
+            </h2>
+            <p class="text-[#C5A572] text-xs font-bold tracking-[0.25em] mb-6">
+              投資哲學
+            </p>
+            <p class="text-xl md:text-2xl font-light text-gray-800 italic font-serif">
+              複利，而非英雄。
+            </p>
+            <p class="mt-3 text-sm text-gray-500 font-light tracking-wide">
+              市場狀態導向研究、紀律配置、制度化風險控制。
+            </p>
+          </div>
 
-        <div class="grid gap-8 md:grid-cols-3">
-          <article class="flex h-full flex-col rounded-2xl bg-white/90 p-7 shadow-subtle ring-1 ring-miyama-navy/8">
-            <div class="mb-4 flex items-center gap-3">
-              <div class="flex h-10 w-10 items-center justify-center rounded-full bg-miyama-navy/5 text-miyama-navy">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-5 w-5">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S12 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S12 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.919 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 11.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
-                </svg>
-              </div>
-              <h3 class="text-lg font-semibold text-miyama-navy">宏觀動態適應</h3>
-            </div>
-            <p class="text-sm leading-relaxed text-miyama-slate">
-              我們不預測，而是適應。無論是通膨衝擊還是通縮收縮，透過多資產全球宏觀框架，從股票、利率到外匯與套利，在不同景氣循環中捕捉機會。
-            </p>
-            <p class="mt-4 text-xs text-miyama-slate/70">
-              由實戰經驗出發，在不同宏觀周期中動態調整部位，而非執著於單一敘事。
-            </p>
-          </article>
+          <div class="grid grid-cols-1 md:grid-cols-3 relative">
+            <!-- 01 -->
+            <div class="relative px-4 md:px-8 flex flex-col items-center text-center group">
+              <span class="font-serif text-6xl text-[#C5A572]/30 group-hover:text-[#C5A572] transition-colors duration-500 mb-4">
+                01
+              </span>
 
-          <article class="flex h-full flex-col rounded-2xl bg-white/90 p-7 shadow-subtle ring-1 ring-miyama-gold/20">
-            <div class="mb-4 flex items-center gap-3">
-              <div class="flex h-10 w-10 items-center justify-center rounded-full bg-miyama-gold/10 text-miyama-gold">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-5 w-5">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.243-8.25-3.285z" />
-                </svg>
-              </div>
-              <h3 class="text-lg font-semibold text-miyama-navy">非對稱風險控管</h3>
-            </div>
-            <p class="text-sm leading-relaxed text-miyama-slate">
-              先確保能活下來，才能談報酬。我們嚴格設定回撤與部位上限，重視市場流動性，將停損視為長期複利必須支付的保費，而不是操作失敗。
-            </p>
-            <p class="mt-4 text-xs text-miyama-slate/70">
-              硬性停損與資金控管，是在極端情境下保護資本、延續複利曲線的關鍵。
-            </p>
-          </article>
+              <h3 class="font-serif text-2xl text-[#0B1C38] mb-3 leading-tight transition-colors group-hover:text-black">
+                宏觀動態<br />適應
+              </h3>
 
-          <article class="flex h-full flex-col rounded-2xl bg-white/90 p-7 shadow-subtle ring-1 ring-miyama-navy/8">
-            <div class="mb-4 flex items-center gap-3">
-              <div class="flex h-10 w-10 items-center justify-center rounded-full bg-miyama-navy/5 text-miyama-navy">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-5 w-5">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
-                </svg>
-              </div>
-              <h3 class="text-lg font-semibold text-miyama-navy">Quantamental 優勢</h3>
+              <p class="text-sm font-bold text-[#0B1C38] mb-5 italic tracking-wide">
+                「我們不預測；我們適應。」
+              </p>
+
+              <p class="text-gray-600 text-sm leading-7 font-light max-w-xs mx-auto mb-12">
+                以多資產全球框架動態配置，涵蓋股票、利率、外匯、波動率與套利，因應不同景氣與政策循環，在變動的市場狀態中捕捉機會，而不錨定單一敘事。
+              </p>
+
+              <div class="hidden md:block absolute right-0 top-0 bottom-0 w-px bg-[#0B1C38]/10"></div>
             </div>
-            <p class="text-sm leading-relaxed text-miyama-slate">
-              結合人類直覺與機器精準。利用 AI 驅動的情緒與部位分析，橫跨亞洲與美股市場，在擁擠交易與情緒極端形成全面反轉之前，先一步調整風險。
-            </p>
-            <p class="mt-4 text-xs text-miyama-slate/70">
-              把宏觀主觀判斷與量化工具接軌，在風險尚可控時主動去擠掉擁擠度。
-            </p>
-          </article>
+
+            <!-- 02 -->
+            <div class="relative px-4 md:px-8 flex flex-col items-center text-center group mt-16 md:mt-0">
+              <span class="font-serif text-6xl text-[#C5A572]/30 group-hover:text-[#C5A572] transition-colors duration-500 mb-4">
+                02
+              </span>
+
+              <h3 class="font-serif text-2xl text-[#0B1C38] mb-3 leading-tight transition-colors group-hover:text-black">
+                非對稱風險<br />控管
+              </h3>
+
+              <p class="text-sm font-bold text-[#0B1C38] mb-5 italic tracking-wide">
+                「先求生存，後談報酬。」
+              </p>
+
+              <p class="text-gray-600 text-sm leading-7 font-light max-w-xs mx-auto mb-12">
+                嚴格回撤上限、流動性優先與預先退出機制。停損不是失敗，而是為了保護長期複利必須支付的「保費」；重點是持續留在市場、等待高勝率時刻出手。
+              </p>
+
+              <div class="hidden md:block absolute right-0 top-0 bottom-0 w-px bg-[#0B1C38]/10"></div>
+            </div>
+
+            <!-- 03 -->
+            <div class="relative px-4 md:px-8 flex flex-col items-center text-center group mt-16 md:mt-0">
+              <span class="font-serif text-6xl text-[#C5A572]/30 group-hover:text-[#C5A572] transition-colors duration-500 mb-4">
+                03
+              </span>
+
+              <h3 class="font-serif text-2xl text-[#0B1C38] mb-3 leading-tight transition-colors group-hover:text-black">
+                Quantamental<br />優勢
+              </h3>
+
+              <p class="text-sm font-bold text-[#0B1C38] mb-5 italic tracking-wide">
+                「人類洞察 × 機器精準。」
+              </p>
+
+              <p class="text-gray-600 text-sm leading-7 font-light max-w-xs mx-auto mb-12">
+                以宏觀判斷作為方向，以數據訊號作為紀律。透過 AI 驅動的情緒與部位分析，橫跨亞洲與美股市場，及早辨識擁擠與共識化風險，在趨勢反轉前先一步調整曝險。
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -326,7 +317,11 @@
                     aria-label="LinkedIn"
                   >
                     <svg class="h-4 w-4 block" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                      <path fill-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clip-rule="evenodd" />
+                      <path
+                        fill-rule="evenodd"
+                        d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                        clip-rule="evenodd"
+                      />
                     </svg>
                   </a>
                 </div>
@@ -376,7 +371,6 @@
 
       <div class="mt-5 flex flex-col items-center gap-4">
         <div class="flex gap-6">
-          <!-- X -->
           <a
             href="https://x.com/miyamacapital"
             target="_blank"
@@ -385,11 +379,12 @@
             aria-label="X"
           >
             <svg class="h-5 w-5 block" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M13.6823 10.6218L20.2391 3H18.6854L12.9921 9.61788L8.44486 3H3.2002L10.0765 13.0074L3.2002 21H4.75404L10.7663 14.0113L15.5685 21H20.8131L13.6819 10.6218H13.6823ZM11.5541 13.0956L10.8574 12.0991L5.31391 4.16971H7.70053L12.1742 10.5689L12.8709 11.5655L18.6861 19.8835H16.2995L11.5541 13.096V13.0956Z" />
+              <path
+                d="M13.6823 10.6218L20.2391 3H18.6854L12.9921 9.61788L8.44486 3H3.2002L10.0765 13.0074L3.2002 21H4.75404L10.7663 14.0113L15.5685 21H20.8131L13.6819 10.6218H13.6823ZM11.5541 13.0956L10.8574 12.0991L5.31391 4.16971H7.70053L12.1742 10.5689L12.8709 11.5655L18.6861 19.8835H16.2995L11.5541 13.096V13.0956Z"
+              />
             </svg>
           </a>
 
-          <!-- Vocus -->
           <a
             href="https://vocus.cc/salon/miyama-capital"
             target="_blank"
@@ -399,11 +394,10 @@
             title="閱讀方格子專欄"
           >
             <svg class="w-5 h-5 block" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M4 4h7v7H4V4zm0 9h7v7H4v-7zm9-9h7v7h-7V4zm0 9h7v7h-7v-7z" />
+              <path d="M4 4h7v7H4V4zm0 9h7v7H4v-7zm9-9h7v7h-7V4zm0 9h7v7h-7v-7z"/>
             </svg>
           </a>
 
-          <!-- GitHub -->
           <a
             href="https://github.com/miyamacapital"
             target="_blank"
@@ -412,7 +406,11 @@
             aria-label="GitHub"
           >
             <svg class="h-5 w-5 block" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
+              <path
+                fill-rule="evenodd"
+                d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                clip-rule="evenodd"
+              />
             </svg>
           </a>
         </div>
