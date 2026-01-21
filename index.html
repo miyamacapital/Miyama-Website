@@ -3,20 +3,32 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
   <meta name="robots" content="index, follow">
+
+  <link rel="canonical" href="https://www.miyamacap.com/en/index.html" />
+
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.miyamacap.com/">
   <meta property="og:title" content="Miyama Capital | Global Macro. Quantified.">
   <meta property="og:description" content="Miyama Capital: Geoeconomic Macro · Multi-Asset Allocation · Asymmetric Payoffs. Regime-aware research. Institutional risk controls.">
-  
   <meta property="og:image" content="https://www.miyamacap.com/web_images/favlogo.png">
+  
+  <meta name="description" content="Miyama Capital manages proprietary capital with a research-driven global macro and quantitative platform. Select language to enter: English or Chinese.">
+
   <title>Miyama Capital</title> 
   <link rel="icon" type="image/png" href="web_images/Logo.png">
   
+  <style>
+    /* 選擇性：讓轉址時畫面乾淨一點，避免文字一閃而過 */
+    body { font-family: sans-serif; color: #333; padding: 20px; }
+  </style>
+
   <script>
     const savedLang = localStorage.getItem("miyama-lang");
     const browserLang = navigator.language || navigator.userLanguage;
-    const isChinese = browserLang.toLowerCase().startsWith("zh");
+    // 修正：有些瀏覽器會回傳 "zh-TW" 或 "zh-CN"，確保邏輯正確
+    const isChinese = browserLang.toLowerCase().includes("zh"); 
 
     let target = "en/index.html"; 
 
@@ -32,6 +44,13 @@
   </script>
 </head>
 <body>
-  <p>Miyama Capital: Geoeconomic Macro · Multi-Asset Allocation · Asymmetric Payoffs. Regime-aware research. Institutional risk controls.<a href="en/index.html">English</a> or <a href="zh/index.html">中文</a></p>
+  <h1>Miyama Capital</h1>
+  <p>
+    Miyama Capital: Geoeconomic Macro · Multi-Asset Allocation · Asymmetric Payoffs. 
+    Regime-aware research. Institutional risk controls.
+  </p>
+  <p>
+    Please select your language: <a href="en/index.html">English</a> | <a href="zh/index.html">中文</a>
+  </p>
 </body>
 </html>
