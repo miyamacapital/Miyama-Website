@@ -269,7 +269,7 @@
       var langLabels = { "zh-TW": "🇹🇼 繁中", en: "🇺🇸 EN", ja: "🇯🇵 JP" };
       var ctaText = { "zh-TW": "閱讀全文 →", en: "Read more →", ja: "続きを読む →" };
 
-      fetch("../data/articles.json")
+      fetch("/data/articles.json")
         .then(function (r) { return r.json(); })
         .then(function (data) {
           articles = data.sort(function (a, b) {
@@ -367,4 +367,11 @@
         var catBtn = e.target.closest("[data-cat]");
         if (catBtn) { currentCat = catBtn.dataset.cat; currentPage = 1; render(); return; }
         var pageBtn = e.target.closest("[data-page]");
-        if (pageBtn) { curr
+        if (pageBtn) { currentPage = parseInt(pageBtn.dataset.page, 10); render(); window.scrollTo({ top: 0, behavior: "smooth" }); }
+      });
+
+      window.addEventListener("popstate", function () { readURLParams(); render(); });
+    })();
+    </script>
+  </body>
+</html>
