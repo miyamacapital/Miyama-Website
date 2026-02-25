@@ -8,12 +8,7 @@
     "summary": "拆解中國減持美債背後的真實動機——這不是地緣政治攻勢，而是外匯存底管理的防守性操作。分析減持規模、替代配置去向、以及對美債市場的實質影響。",
     "url": "https://vocus.cc/article/67bb6ba4fd89780001dfde92",
     "platform": "vocus",
-    "tags": [
-      "中國",
-      "美債",
-      "地緣政治",
-      "外匯存底"
-    ],
+    "tags": ["中國", "美債", "地緣政治", "外匯存底"],
     "featured": false
   },
   {
@@ -25,12 +20,7 @@
     "summary": "深入分析台灣都更中地主面臨的結構性不利——建商透過合法機制稀釋地主權益的常見手段，以及為什麼「等都更」的機會成本可能比你想像得更高。",
     "url": "https://vocus.cc/article/67b5e6e4fd89780001db3a83",
     "platform": "vocus",
-    "tags": [
-      "都更",
-      "台灣不動產",
-      "建商",
-      "機會成本"
-    ],
+    "tags": ["都更", "台灣不動產", "建商", "機會成本"],
     "featured": false
   },
   {
@@ -42,12 +32,7 @@
     "summary": "以紐約市 $127B 預算為案例，分析政策風險如何傳導至資產定價。當城市財政壓力升高，不動產稅基、市政債信用、與區域經濟活力的連鎖反應。",
     "url": "https://vocus.cc/article/67b5ba9dfd89780001db1e49",
     "platform": "vocus",
-    "tags": [
-      "紐約",
-      "財政政策",
-      "資產配置",
-      "市政債"
-    ],
+    "tags": ["紐約", "財政政策", "資產配置", "市政債"],
     "featured": false
   },
   {
@@ -59,12 +44,7 @@
     "summary": "AI 正在重新定價人力資本——80 分的「夠好」專業技能價值正在快速歸零，只有頂尖與不可替代的能力才能保值。這對個人職涯與投資人才評估的雙重意義。",
     "url": "https://vocus.cc/article/67b1c80efd89780001d86cf7",
     "platform": "vocus",
-    "tags": [
-      "AI",
-      "人力定價",
-      "職涯",
-      "結構性變革"
-    ],
+    "tags": ["AI", "人力定價", "職涯", "結構性變革"],
     "featured": false
   },
   {
@@ -76,12 +56,7 @@
     "summary": "深度拆解一月 CPI 2.4% 的組成結構：核心服務、住房、商品各分項的趨勢解讀，以及對 2026 全年通膨路徑的情境推演與聯準會政策含義。",
     "url": "https://vocus.cc/article/67af9f94fd89780001d71b75",
     "platform": "vocus",
-    "tags": [
-      "CPI",
-      "通膨",
-      "聯準會",
-      "利率路徑"
-    ],
+    "tags": ["CPI", "通膨", "聯準會", "利率路徑"],
     "featured": false
   },
   {
@@ -93,12 +68,7 @@
     "summary": "解讀非農 13 萬新增就業的表面數字與深層結構——勞動參與率、兼職轉正職比例、薪資增速等指標如何呈現經濟的真實溫度，以及對聯準會決策的影響。",
     "url": "https://vocus.cc/article/67ab9c16fd89780001d42c0d",
     "platform": "vocus",
-    "tags": [
-      "非農就業",
-      "勞動市場",
-      "經濟指標",
-      "聯準會"
-    ],
+    "tags": ["非農就業", "勞動市場", "經濟指標", "聯準會"],
     "featured": false
   },
   {
@@ -110,12 +80,7 @@
     "summary": "2026 年 2 月因子動能定期更新：追蹤價值、動能、品質、規模等因子的相對表現與輪動訊號，為跨資產配置提供量化參考依據。",
     "url": "https://vocus.cc/article/67a70f3cfd89780001d0e4d9",
     "platform": "vocus",
-    "tags": [
-      "因子投資",
-      "動能",
-      "量化",
-      "定期更新"
-    ],
+    "tags": ["因子投資", "動能", "量化", "定期更新"],
     "featured": false
   },
   {
@@ -127,12 +92,7 @@
     "summary": "Taleb 的槓鈴策略不只適用於投資——90% 極度保守 + 10% 極度冒險的配置邏輯，如何應用在職涯選擇、時間管理與人生決策上。",
     "url": "https://vocus.cc/article/67a1d18bfd89780001ccd8ab",
     "platform": "vocus",
-    "tags": [
-      "槓鈴策略",
-      "Taleb",
-      "風險管理",
-      "人生框架"
-    ],
+    "tags": ["槓鈴策略", "Taleb", "風險管理", "人生框架"],
     "featured": false
   },
   {
@@ -144,12 +104,7 @@
     "summary": "十年投資心態的真實轉變歷程——從追逐個股刺激到擁抱指數化投資的簡單智慧。為什麼「少做」往往是最難但最有效的投資策略。",
     "url": "https://vocus.cc/article/67a1cd04fd89780001ccd633",
     "platform": "vocus",
-    "tags": [
-      "指數化投資",
-      "投資心態",
-      "簡單",
-      "長期投資"
-    ],
+    "tags": ["指數化投資", "投資心態", "簡單", "長期投資"],
     "featured": false
   },
   {
@@ -157,16 +112,11 @@
     "title": "Building Anti-Fragile：一個能在 Regime Shift 中自我修正的投資系統",
     "date": "2026-01-24",
     "lang": "zh-TW",
-    "category": "framework",
+    "category": "philosophy",
     "summary": "從演化論到投資系統設計——個體脆弱、物種反脆弱。如何建立在 Regime Shift 中自我修正的投資框架：嚴謹回測搭配快速 Pivot 彈性，在不確定性中進化。",
     "url": "https://vocus.cc/article/6974979efd89780001e736de",
     "platform": "vocus",
-    "tags": [
-      "反脆弱",
-      "Regime Shift",
-      "系統設計",
-      "投資框架"
-    ],
+    "tags": ["反脆弱", "Regime Shift", "系統設計", "投資框架", "投資哲學"],
     "featured": true
   },
   {
@@ -178,12 +128,7 @@
     "summary": "基準情境：伊朗由安全體系主導權力重組，以降低核風險換取制裁鬆動，壓低油價中期定價。市場仍在定價「地面入侵」的低機率情境，存在錯價機會。",
     "url": "https://vocus.cc/article/696b5e68fd89780001e0d6ea",
     "platform": "vocus",
-    "tags": [
-      "伊朗",
-      "地緣政治",
-      "油價",
-      "宏觀情報"
-    ],
+    "tags": ["伊朗", "地緣政治", "油價", "宏觀情報"],
     "featured": false
   },
   {
@@ -195,12 +140,7 @@
     "summary": "用企業資產負債表的框架分析美國的地緣戰略——為什麼俄羅斯在美國的戰略資產組合中是「非核心資產」，以及這對歐洲安全架構與能源定價的含義。",
     "url": "https://vocus.cc/article/6954fa16fd89780001d2e1be",
     "platform": "vocus",
-    "tags": [
-      "俄羅斯",
-      "美國戰略",
-      "地緣政治",
-      "資產負債表"
-    ],
+    "tags": ["俄羅斯", "美國戰略", "地緣政治", "資產負債表"],
     "featured": false
   },
   {
@@ -208,16 +148,11 @@
     "title": "「下跌時手中沒股票，上漲時也不會有」：論動態水位管理與「絕不空手」的實戰智慧",
     "date": "2025-12-11",
     "lang": "zh-TW",
-    "category": "framework",
+    "category": "philosophy",
     "summary": "Miyama 的「動態水位管理」框架：為什麼堅持絕不空手？底倉是長期遊戲的入場券。結合左右側交易的混合策略，以及資金來源如何決定你的風險承受度。",
     "url": "https://vocus.cc/article/693a8c81fd89780001995955",
     "platform": "vocus",
-    "tags": [
-      "動態水位管理",
-      "底倉",
-      "投資紀律",
-      "風險控管"
-    ],
+    "tags": ["動態水位管理", "底倉", "投資紀律", "風險控管", "投資哲學"],
     "featured": true
   },
   {
@@ -225,33 +160,131 @@
     "title": "從看基本面到看情緒：一個投資人十五年的進化",
     "date": "2025-12-07",
     "lang": "zh-TW",
-    "category": "framework",
+    "category": "philosophy",
     "summary": "十五年投資認知演進——從信仰財報的價值投資，到以國家指數判斷風險，再到用價格與成交量讀市場情緒。短中期由情緒主導，長期回到總經與政策。",
-    "url": "https://vocus.cc/article/6934bf6ffd897800018f95c8",
+    "url": "https://vocus.cc/article/693549c3fd89780001be2f23",
     "platform": "vocus",
-    "tags": [
-      "投資進化",
-      "基本面",
-      "情緒",
-      "認知升級"
-    ],
+    "tags": ["投資進化", "基本面", "情緒", "認知升級", "投資哲學"],
     "featured": false
   },
   {
     "id": "art-021",
     "title": "投資到最後，其實是在認識自己",
-    "date": "2025-12-04",
+    "date": "2025-12-05",
     "lang": "zh-TW",
-    "category": "framework",
+    "category": "philosophy",
     "summary": "投資的終極課題不是找到完美策略，而是認識自己——你的風險偏好、情緒模式、決策盲點。當你真正理解自己，投資系統才能與你的人性對齊而非對抗。",
-    "url": "https://vocus.cc/article/69307e36fd897800018cfe74",
+    "url": "https://vocus.cc/article/6931fee3fd89780001e428a9",
     "platform": "vocus",
-    "tags": [
-      "自我認知",
-      "投資哲學",
-      "心理",
-      "投資心態"
-    ],
+    "tags": ["自我認知", "投資哲學", "心理", "投資心態"],
+    "featured": false
+  },
+  {
+    "id": "art-022",
+    "title": "上帝不擲骰子：為什麼「好運」其實是一種可被構建的實力",
+    "date": "2025-12-08",
+    "lang": "zh-TW",
+    "category": "philosophy",
+    "summary": "運氣不是隨機的——從機率論到投資實務，拆解為什麼「好運」是一種可被系統性構建的能力。如何透過結構設計，讓自己站在機率的正確一側。",
+    "url": "https://vocus.cc/article/693693e6fd8978000119f30f",
+    "platform": "vocus",
+    "tags": ["機率", "運氣", "系統設計", "投資哲學"],
+    "featured": false
+  },
+  {
+    "id": "art-023",
+    "title": "反直覺的投資真相：為什麼「笨拙」的左側交易，才是散戶打敗機構的唯一路徑？",
+    "date": "2025-12-17",
+    "lang": "zh-TW",
+    "category": "philosophy",
+    "summary": "左側交易看似笨拙，卻是散戶唯一的結構性優勢。機構受限於季度績效與流動性需求，而散戶擁有時間——這是最被低估的不對稱武器。",
+    "url": "https://vocus.cc/article/69418e27fd897800010f08cb",
+    "platform": "vocus",
+    "tags": ["左側交易", "散戶", "機構", "不對稱優勢", "投資哲學"],
+    "featured": false
+  },
+  {
+    "id": "art-024",
+    "title": "右側交易的平反：它不是賭博，它是用價格換時間的藝術",
+    "date": "2025-12-17",
+    "lang": "zh-TW",
+    "category": "philosophy",
+    "summary": "右側交易常被誤解為追高殺低，但本質是用確認訊號換取時間成本的降低。拆解右側交易的真正邏輯：不是賭博，而是一種有紀律的趨勢跟隨系統。",
+    "url": "https://vocus.cc/article/6942544ffd897800013a3834",
+    "platform": "vocus",
+    "tags": ["右側交易", "趨勢跟隨", "時間成本", "投資哲學"],
+    "featured": false
+  },
+  {
+    "id": "art-025",
+    "title": "散戶唯一的聖杯：時間套利與那些華爾街不敢做的交易",
+    "date": "2025-12-31",
+    "lang": "zh-TW",
+    "category": "philosophy",
+    "summary": "華爾街受季度績效綁架，無法做長期持有的「時間套利」交易。散戶最大的結構性優勢不是資訊，而是沒有人會在季末考核你的持倉。",
+    "url": "https://vocus.cc/article/69550d80fd897800017a39e9",
+    "platform": "vocus",
+    "tags": ["時間套利", "散戶優勢", "華爾街", "長期持有", "投資哲學"],
+    "featured": false
+  },
+  {
+    "id": "art-026",
+    "title": "巴菲特的真正護城河：被誤解的 Beta 與 Alpha",
+    "date": "2025-12-31",
+    "lang": "zh-TW",
+    "category": "philosophy",
+    "summary": "巴菲特的真正優勢不是選股 Alpha，而是結構性的低成本槓桿 Beta。拆解保險浮存金、永久資本、與稅務遞延如何構成不可複製的護城河。",
+    "url": "https://vocus.cc/article/6955218dfd89780001808994",
+    "platform": "vocus",
+    "tags": ["巴菲特", "Beta", "Alpha", "護城河", "投資哲學"],
+    "featured": false
+  },
+  {
+    "id": "art-027",
+    "title": "德州撲克、投資與馬斯克：你的「人生目標」，決定了你的下注邏輯",
+    "date": "2026-01-01",
+    "lang": "zh-TW",
+    "category": "philosophy",
+    "summary": "從德州撲克的期望值思維到投資決策——你的人生目標函數決定了最優下注策略。馬斯克的全押邏輯與一般人的風險管理為什麼本質上是不同的遊戲。",
+    "url": "https://vocus.cc/article/69553c60fd8978000189bc23",
+    "platform": "vocus",
+    "tags": ["德州撲克", "期望值", "馬斯克", "風險管理", "投資哲學"],
+    "featured": false
+  },
+  {
+    "id": "art-028",
+    "title": "投資的痛苦守恆定律：折磨技術，還是折磨耐心？",
+    "date": "2026-01-11",
+    "lang": "zh-TW",
+    "category": "philosophy",
+    "summary": "投資的痛苦總量守恆——你選擇在研究和系統建構上承受痛苦，或在持倉等待中承受煎熬。理解這個定律，才能選擇與自己性格匹配的投資方式。",
+    "url": "https://vocus.cc/article/6962da64fd89780001b14b64",
+    "platform": "vocus",
+    "tags": ["痛苦守恆", "耐心", "投資心理", "投資哲學"],
+    "featured": false
+  },
+  {
+    "id": "art-029",
+    "title": "Buy, Borrow, Die 不是避稅，是數學：基於 LTV 動態管理的資產負債表工程學",
+    "date": "2026-01-13",
+    "lang": "zh-TW",
+    "category": "philosophy",
+    "summary": "拆解 Buy, Borrow, Die 策略的真正邏輯——不是避稅手段，而是基於 LTV 動態管理的資產負債表工程。如何用借貸成本與資產增值的利差來構建長期財富。",
+    "url": "https://vocus.cc/article/696576cffd897800015fea49",
+    "platform": "vocus",
+    "tags": ["Buy Borrow Die", "LTV", "資產負債表", "財富工程", "投資哲學"],
+    "featured": false
+  },
+  {
+    "id": "art-030",
+    "title": "格陵蘭與華爾街的囚徒困境：探討「自有資金」的優勢",
+    "date": "2026-01-20",
+    "lang": "zh-TW",
+    "category": "philosophy",
+    "summary": "從格陵蘭地緣政治到華爾街資金管理——囚徒困境下，自有資金（proprietary capital）為什麼是最被低估的結構性優勢。不受外部資金壓力，才能做正確的長期決策。",
+    "url": "https://vocus.cc/article/696f496cfd89780001f51183",
+    "platform": "vocus",
+    "tags": ["自有資金", "囚徒困境", "格陵蘭", "結構性優勢", "投資哲學"],
     "featured": false
   }
 ]
