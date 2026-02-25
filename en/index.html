@@ -15,6 +15,7 @@
     <!-- hreflang for multilingual SEO -->
     <link rel="alternate" hreflang="en" href="https://www.miyamacap.com/en/" />
     <link rel="alternate" hreflang="zh-Hant" href="https://www.miyamacap.com/zh/" />
+    <link rel="alternate" hreflang="ja" href="https://www.miyamacap.com/jp/" />
     <link rel="alternate" hreflang="x-default" href="https://www.miyamacap.com/en/" />
     
     <!-- Open Graph (Facebook/LinkedIn) -->
@@ -94,7 +95,6 @@
   </head>
 
   <body class="bg-miyama-cream text-miyama-slate antialiased">
-    <!-- ✅ FIX: make header fill viewport height -->
     <header class="relative bg-miyama-navy text-white min-h-screen flex flex-col">
       <div
         class="pointer-events-none absolute inset-0 opacity-20 mix-blend-screen"
@@ -142,6 +142,9 @@
               >
               <a href="#founder" class="text-gray-300 hover:text-white"
                 >Founder</a
+              >
+              <a href="/en/insights.html" class="text-gray-300 hover:text-white"
+                >Insights</a
               >
 
               <a
@@ -196,13 +199,18 @@
               >
                 中
               </a>
+              <a
+                href="../jp/index.html"
+                class="rounded-full px-2 py-1 font-medium tracking-wide text-gray-300 hover:text-white"
+              >
+                JP
+              </a>
             </div>
           </div>
         </div>
       </nav>
 
       <!-- Hero -->
-      <!-- ✅ FIX: flex-1 + justify-center so header fills screen and no white gap -->
       <div
         class="relative z-10 mx-auto flex w-full max-w-6xl flex-1 flex-col items-center justify-center px-4 py-16 text-center md:px-6 md:py-24"
       >
@@ -213,7 +221,6 @@
             Miyama Capital
           </p>
 
-          <!-- Headline: 2 lines, second line in gold -->
           <div class="text-center">
             <h1
               class="text-white font-serif text-4xl md:text-6xl font-medium tracking-wide leading-tight mb-2 md:mb-4"
@@ -228,7 +235,6 @@
             </h1>
           </div>
 
-          <!-- Description -->
           <p
             class="mt-8 md:mt-10 text-gray-300 text-sm md:text-lg font-light tracking-wide leading-relaxed max-w-2xl mx-auto opacity-90"
           >
@@ -238,17 +244,14 @@
             research and institutional risk controls.
           </p>
 
-          <!-- Scope line -->
           <p
             class="mx-auto mb-6 max-w-2xl text-xs text-gray-300 md:text-sm text-center"
           >
             Global coverage｜Core: US / Taiwan / Japan
           </p>
 
-          <!-- Divider -->
           <div class="mx-auto mb-8 h-0.5 w-20 bg-miyama-gold/60 md:mb-10"></div>
 
-          <!-- Primary CTA -->
           <div
             class="flex flex-col items-center justify-center gap-4 md:flex-row"
           >
@@ -277,7 +280,6 @@
           </div>
         </div>
 
-        <!-- Scroll hint -->
         <div class="mt-12 flex items-center gap-2 text-xs text-gray-300">
           <span>Scroll</span>
           <span class="h-7 w-[1px] bg-gray-500"></span>
