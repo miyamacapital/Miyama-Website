@@ -1,0 +1,588 @@
+import { useState } from "react";
+
+// ═══════════════════════════════════════════════════════════════
+// Miyama Capital — AI Agent Command Structure v5.0
+// Updated: 2026-02-25
+// Changes: Brand Architecture v2 (Quantmental Global Macro),
+//          CMO→CNO (D8), Remove Creative Ops Mgr (D7),
+//          Add Chief Engineer, Model upgrades,
+//          JP two-layer QC system, cost structure update
+// ═══════════════════════════════════════════════════════════════
+
+const COLORS = {
+  bg: "#0a0e27",
+  bgAlt: "#1a1f3a",
+  gold: "#d4af37",
+  goldDim: "rgba(212, 175, 55, 0.2)",
+  blue: "#2980b9",
+  blueLight: "#5dade2",
+  green: "#27ae60",
+  purple: "#8e44ad",
+  purpleLight: "#ab7ac9",
+  pink: "#e91e63",
+  cyan: "#00bcd4",
+  teal: "#009688",
+  text: "#e8e6e3",
+  textDim: "#8892b0",
+  textMuted: "#5a6377",
+  border: "rgba(255,255,255,0.08)",
+};
+
+/* ── Reusable Components ── */
+
+function DivisionHeader({ title, icon, color, badge }) {
+  return (
+    <div style={{
+      display: "flex", alignItems: "center", gap: 10,
+      marginBottom: 16, paddingBottom: 10,
+      borderBottom: `2px solid ${color}40`,
+    }}>
+      <span style={{ fontSize: 18, color }}>{icon}</span>
+      <span style={{
+        fontSize: 13, fontWeight: 700, color, letterSpacing: 2,
+        textTransform: "uppercase",
+      }}>{title}</span>
+      {badge && (
+        <span style={{
+          fontSize: 9, color: COLORS.gold, padding: "2px 8px",
+          background: COLORS.goldDim, borderRadius: 3, fontWeight: 700,
+        }}>{badge}</span>
+      )}
+    </div>
+  );
+}
+
+function AgentCard({ title, model, color, role, description, highlight, tag }) {
+  const [hover, setHover] = useState(false);
+  return (
+    <div
+      onMouseEnter={() => setHover(true)}
+      onMouseLeave={() => setHover(false)}
+      style={{
+        padding: 16,
+        background: highlight
+          ? `linear-gradient(135deg, ${color}18 0%, ${color}08 100%)`
+          : `${color}0a`,
+        border: `1px solid ${hover ? color + "80" : color + "30"}`,
+        borderRadius: 8,
+        transition: "all 0.2s ease",
+        transform: hover ? "translateY(-1px)" : "none",
+        cursor: "default",
+      }}
+    >
+      <div style={{
+        display: "flex", justifyContent: "space-between", alignItems: "flex-start",
+        marginBottom: 8,
+      }}>
+        <div style={{ fontSize: 14, fontWeight: 700, color, lineHeight: 1.3 }}>
+          {title}
+        </div>
+        {tag && (
+          <span style={{
+            fontSize: 8, color: tag === "NEW" ? "#2ecc71" : COLORS.gold,
+            padding: "2px 6px",
+            background: tag === "NEW" ? "rgba(46,204,113,0.15)" : COLORS.goldDim,
+            borderRadius: 3, fontWeight: 700, letterSpacing: 1,
+            flexShrink: 0, marginLeft: 8,
+          }}>{tag}</span>
+        )}
+      </div>
+      <div style={{
+        display: "flex", alignItems: "center", gap: 8, marginBottom: 8,
+      }}>
+        <span style={{
+          fontSize: 9, color: COLORS.textDim, padding: "2px 8px",
+          background: "rgba(255,255,255,0.05)", borderRadius: 3,
+          fontFamily: "'JetBrains Mono', monospace",
+        }}>{model}</span>
+        <span style={{ fontSize: 10, color: COLORS.textMuted }}>•</span>
+        <span style={{ fontSize: 10, color: `${color}cc`, fontWeight: 600 }}>{role}</span>
+      </div>
+      <div style={{
+        fontSize: 11, color: COLORS.textDim, lineHeight: 1.6,
+      }}>{description}</div>
+    </div>
+  );
+}
+
+function CouncilMember({ name, focus, model }) {
+  return (
+    <div style={{
+      display: "flex", alignItems: "center", gap: 10,
+      padding: "6px 0",
+    }}>
+      <span style={{
+        width: 6, height: 6, borderRadius: "50%",
+        background: COLORS.blueLight, flexShrink: 0,
+      }} />
+      <span style={{ fontSize: 11, color: "#ccc", fontWeight: 600, minWidth: 110 }}>{name}</span>
+      <span style={{ fontSize: 10, color: COLORS.textMuted }}>{focus}</span>
+      <span style={{
+        fontSize: 9, color: COLORS.textMuted, marginLeft: "auto",
+        fontFamily: "'JetBrains Mono', monospace",
+      }}>{model}</span>
+    </div>
+  );
+}
+
+function Spacer({ h = 12 }) {
+  return <div style={{ height: h }} />;
+}
+
+/* ── Main Component ── */
+
+export default function MiyamaOrgChartV5() {
+  const [showCost, setShowCost] = useState(false);
+
+  return (
+    <div style={{
+      width: "100%", minHeight: "100vh",
+      background: `linear-gradient(135deg, ${COLORS.bg} 0%, ${COLORS.bgAlt} 50%, #0f1419 100%)`,
+      padding: "40px 20px",
+      fontFamily: "'JetBrains Mono', 'SF Mono', Menlo, monospace",
+      color: COLORS.text,
+    }}>
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600;700&display=swap');
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+      `}</style>
+
+      <div style={{ maxWidth: 1200, margin: "0 auto" }}>
+
+        {/* ═══ HEADER ═══ */}
+        <div style={{
+          textAlign: "center", marginBottom: 50,
+          animation: "fadeIn 0.8s ease-out",
+        }}>
+          <div style={{
+            fontSize: 12, letterSpacing: 4, color: COLORS.gold,
+            marginBottom: 8, textTransform: "uppercase", fontWeight: 300,
+          }}>
+            AI Agent Command Structure v5.0
+          </div>
+          <h1 style={{
+            fontSize: 42, fontWeight: 700, color: "#fff",
+            margin: "0 0 8px", letterSpacing: -1,
+            background: "linear-gradient(135deg, #fff 0%, #d4af37 100%)",
+            WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent",
+          }}>
+            MIYAMA CAPITAL
+          </h1>
+          <div style={{
+            fontSize: 13, color: COLORS.textDim, letterSpacing: 2,
+            marginBottom: 16,
+          }}>
+            Quantmental Global Macro — Systematic Quant, Macro Conviction
+          </div>
+
+          {/* Stats bar */}
+          <div style={{
+            display: "flex", justifyContent: "center", gap: 30,
+            flexWrap: "wrap",
+          }}>
+            {[
+              ["~15", "Active Agents"],
+              ["3", "Markets (US/TW/JP)"],
+              ["6", "Divisions"],
+              ["3", "Languages"],
+            ].map(([val, label]) => (
+              <div key={label} style={{ textAlign: "center" }}>
+                <div style={{ fontSize: 20, fontWeight: 700, color: COLORS.gold }}>{val}</div>
+                <div style={{ fontSize: 9, color: COLORS.textMuted, letterSpacing: 1 }}>{label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* ═══ CIO ═══ */}
+        <div style={{
+          textAlign: "center", padding: "20px 30px",
+          background: `linear-gradient(135deg, rgba(212,175,55,0.12) 0%, rgba(212,175,55,0.04) 100%)`,
+          border: `2px solid ${COLORS.gold}40`,
+          borderRadius: 12, marginBottom: 40,
+          animation: "slideUp 0.8s ease-out 0.2s backwards",
+        }}>
+          <div style={{ fontSize: 11, color: COLORS.gold, letterSpacing: 2, fontWeight: 600, marginBottom: 8 }}>
+            ▸ DECISION MAKER
+          </div>
+          <div style={{ fontSize: 22, fontWeight: 700, color: "#fff", marginBottom: 4 }}>
+            CIO: Kuan H. Wang
+          </div>
+          <div style={{ fontSize: 10, color: COLORS.textDim, letterSpacing: 1 }}>
+            HUMAN COMMANDER · All Final Decisions
+          </div>
+        </div>
+
+        {/* ═══ MAIN GRID ═══ */}
+        <div style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
+          gap: 36, marginBottom: 36,
+        }}>
+
+          {/* ── Office of the CIO ── */}
+          <div style={{ animation: "slideUp 0.8s ease-out 0.3s backwards" }}>
+            <DivisionHeader title="Office of the CIO" icon="◆" color={COLORS.gold} />
+            <AgentCard
+              title="Chief of Staff / Architect"
+              model="Claude Opus"
+              color="#c9a961"
+              role="Strategy & Systems Design"
+              description="Second brain. Designs systems, not tasks. MECE + leverage optimization. Owns roadmap, OKRs, decision journal, cross-border architecture."
+            />
+            <Spacer />
+            <AgentCard
+              title="Chief Narrative Officer (CNO)"
+              model="Claude Opus"
+              color={COLORS.gold}
+              role="Brand Strategy & Content Guardian"
+              description="Defines quarterly narrative themes. Reviews ALL content for brand positioning. Final approval on external messaging. Owns L1/L2/L3 brand framework."
+              highlight
+              tag="RENAMED"
+            />
+          </div>
+
+          {/* ── Macro Intelligence ── */}
+          <div style={{ animation: "slideUp 0.8s ease-out 0.4s backwards" }}>
+            <DivisionHeader title="Macro Intelligence Unit" icon="◈" color={COLORS.blue} badge="CORE MOAT" />
+
+            <div style={{
+              padding: 16,
+              background: `linear-gradient(135deg, ${COLORS.blue}18 0%, ${COLORS.blue}08 100%)`,
+              border: `2px solid ${COLORS.blue}40`,
+              borderRadius: 8, marginBottom: 12,
+            }}>
+              <div style={{
+                fontSize: 10, color: COLORS.blueLight, letterSpacing: 1.5,
+                marginBottom: 12, fontWeight: 700,
+              }}>
+                ⚡ TWO-LAYER INTELLIGENCE ARCHITECTURE
+              </div>
+              <AgentCard
+                title="L1: Chief Macro Strategist"
+                model="Gemini 2.0 Flash"
+                color={COLORS.blue}
+                role="Breadth — Data Collection & Synthesis"
+                description="Real-time search, 1M token context. Reads 50+ research reports, synthesizes patterns. Daily market scanning across US/TW/JP."
+              />
+              <Spacer h={8} />
+              <AgentCard
+                title="L2: Deep Analysis Consultant"
+                model="OpenAI o3-mini-high"
+                color="#1a6b9c"
+                role="Depth — Reasoning & Scenario Mapping"
+                description="Activated for high-stakes decisions. Multi-step reasoning on complex trade structures, macro regime shifts, cross-asset transmission analysis."
+              />
+            </div>
+
+            <div style={{
+              padding: 14, background: `${COLORS.blue}0c`,
+              border: `1px solid ${COLORS.blue}25`, borderRadius: 6,
+            }}>
+              <div style={{ fontSize: 10, color: COLORS.blueLight, letterSpacing: 1.5, marginBottom: 10, fontWeight: 600 }}>
+                ▸ THE MACRO COUNCIL (Support Layer)
+              </div>
+              <CouncilMember name="The Realist" focus="Data-driven" model="Gemini" />
+              <CouncilMember name="The Structuralist" focus="Cycle analysis" model="Claude" />
+              <CouncilMember name="The Contrarian" focus="Game theory" model="ChatGPT" />
+            </div>
+          </div>
+
+          {/* ── Operations & Risk ── */}
+          <div style={{ animation: "slideUp 0.8s ease-out 0.5s backwards" }}>
+            <DivisionHeader title="Operations & Risk" icon="◇" color={COLORS.green} />
+            <AgentCard
+              title="Chief Risk Officer"
+              model="OpenAI o3-mini-high"
+              color={COLORS.green}
+              role="Kill Switch Authority"
+              description="Rigorous logical reasoning to find blind spots. Verdict: Kill/Pass on investment ideas & high-risk content. Owns Fault-Tolerant Risk Framework."
+            />
+            <Spacer />
+            <AgentCard
+              title="CFO / Controller"
+              model="Gemini 2.0 Flash"
+              color="#1e8449"
+              role="Financial Plumbing"
+              description="Lightning-fast document processing. Tracks capital flows, invoices, compliance. QuickBooks integration. Lowest cost per task."
+            />
+          </div>
+
+          {/* ── Editorial Production (spans 2 cols on wide) ── */}
+          <div style={{
+            animation: "slideUp 0.8s ease-out 0.6s backwards",
+            gridColumn: "1 / -1",
+          }}>
+            <DivisionHeader title="Editorial Production" icon="◐" color={COLORS.purple} />
+
+            <div style={{
+              padding: 16,
+              background: `linear-gradient(135deg, ${COLORS.purple}15 0%, ${COLORS.purple}05 100%)`,
+              border: `2px solid ${COLORS.purple}40`,
+              borderRadius: 8, marginBottom: 16,
+            }}>
+              <div style={{
+                fontSize: 10, color: COLORS.purpleLight, letterSpacing: 1.5,
+                marginBottom: 10, fontWeight: 700,
+              }}>
+                ✦ THREE-LAYER EDITORIAL SYSTEM
+              </div>
+              <div style={{ fontSize: 11, color: COLORS.textDim, lineHeight: 1.8 }}>
+                1. <strong style={{ color: COLORS.purpleLight }}>Writers create</strong> (不審查) — Focus on execution & quality writing<br />
+                2. <strong style={{ color: COLORS.purpleLight }}>QC Editors review</strong> (不創作) — Technical compliance only, no strategy<br />
+                3. <strong style={{ color: COLORS.purpleLight }}>CNO approves</strong> (戰略 + 最終決定) — Brand positioning & final say
+              </div>
+            </div>
+
+            <div style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+              gap: 12,
+            }}>
+              {/* TW Desk */}
+              <div style={{
+                padding: 14, background: `${COLORS.purple}0c`,
+                border: `1px solid ${COLORS.purple}25`, borderRadius: 6,
+              }}>
+                <div style={{ fontSize: 11, fontWeight: 700, color: COLORS.purpleLight, marginBottom: 10 }}>
+                  🇹🇼 Taiwan Desk — 方格子 (vocus.cc)
+                </div>
+                <AgentCard
+                  title="TW Writer"
+                  model="Claude Opus"
+                  color={COLORS.purple}
+                  role="繁體中文主筆"
+                  description="方格子 Salon 長文創作。宏觀傳導分析、Active Holding 案例、投資哲學。"
+                />
+                <Spacer h={6} />
+                <AgentCard
+                  title="TW QC Editor"
+                  model="Claude Sonnet"
+                  color="#6c3483"
+                  role="中文品質審查"
+                  description="技術合規、品牌對齊、事實查核。不改寫、不策略——純 QC。"
+                />
+              </div>
+
+              {/* JP Desk */}
+              <div style={{
+                padding: 14, background: `${COLORS.purple}0c`,
+                border: `1px solid ${COLORS.purple}25`, borderRadius: 6,
+              }}>
+                <div style={{ fontSize: 11, fontWeight: 700, color: COLORS.purpleLight, marginBottom: 10 }}>
+                  🇯🇵 Japan Desk — Note.com
+                </div>
+                <AgentCard
+                  title="JP Writer"
+                  model="Claude Opus"
+                  color={COLORS.purple}
+                  role="日本語主筆"
+                  description="日本市場向け長文コンテンツ。日本の読者に最適化された独自の文体。"
+                />
+                <Spacer h={6} />
+                <AgentCard
+                  title="JP QC Editor"
+                  model="Claude Sonnet"
+                  color="#6c3483"
+                  role="日本語品質審査"
+                  description="Technical compliance & brand alignment. Catches errors, not rewrites."
+                />
+                <Spacer h={6} />
+                <div style={{
+                  padding: 10, background: "rgba(255,152,0,0.08)",
+                  border: "1px solid rgba(255,152,0,0.3)", borderRadius: 4,
+                }}>
+                  <div style={{ fontSize: 9, color: "#ffb74d", letterSpacing: 1, fontWeight: 700, marginBottom: 6 }}>
+                    中文感 QC — TWO-LAYER DE-SINIFICATION
+                  </div>
+                  <div style={{ fontSize: 10, color: COLORS.textMuted, lineHeight: 1.6 }}>
+                    <span style={{ color: "#ffb74d" }}>L1 Scanner</span> (Gemini) → Pattern detection, batch flagging<br />
+                    <span style={{ color: "#ffb74d" }}>L2 Reviewer</span> (ChatGPT) → Context-aware rewrite proposals
+                  </div>
+                </div>
+              </div>
+
+              {/* EN Desk */}
+              <div style={{
+                padding: 14, background: `${COLORS.purple}0c`,
+                border: `1px solid ${COLORS.purple}25`, borderRadius: 6,
+              }}>
+                <div style={{ fontSize: 11, fontWeight: 700, color: COLORS.purpleLight, marginBottom: 10 }}>
+                  🌐 Global Desk — Substack / LinkedIn
+                </div>
+                <AgentCard
+                  title="EN Writer"
+                  model="Claude Opus"
+                  color={COLORS.purple}
+                  role="English Global Content"
+                  description="Substack memos, LinkedIn posts, English-language thought leadership for peer investors & family offices."
+                />
+                <Spacer h={6} />
+                <AgentCard
+                  title="EN QC Editor"
+                  model="Claude Sonnet"
+                  color="#6c3483"
+                  role="English Quality Review"
+                  description="Style, compliance, fact-checking for English content. SEC-aware disclosure review."
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* ── Creative Production ── */}
+          <div style={{
+            animation: "slideUp 0.8s ease-out 0.7s backwards",
+            gridColumn: "span 2",
+          }}>
+            <DivisionHeader title="Creative Production" icon="✦" color={COLORS.pink} />
+
+            <div style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+              gap: 12,
+            }}>
+              <AgentCard
+                title="Visual Content Director"
+                model="GPT-4 + Image Gen"
+                color={COLORS.pink}
+                role="Kawaii Illustration & Brand Assets"
+                description="Concept design, prompt engineering, iteration. 文章配圖、社群素材、品牌視覺。Japanese kawaii instructional style, soft pastel palette."
+                highlight
+              />
+              <AgentCard
+                title="Data Visualization Engineer"
+                model="Claude Sonnet"
+                color={COLORS.cyan}
+                role="Charts & Interactive Dashboards"
+                description="Superior aesthetic judgment + clean code. Investment reports, portfolio analytics, backtest visualization. Miyama brand-consistent charts."
+                highlight
+              />
+            </div>
+
+            <div style={{
+              marginTop: 10, padding: 10,
+              background: `${COLORS.pink}08`, border: `1px solid ${COLORS.pink}25`,
+              borderRadius: 6, fontSize: 10, color: COLORS.textMuted, lineHeight: 1.6,
+            }}>
+              <strong style={{ color: "#ec4899" }}>Note:</strong> Creative Ops Manager removed (D7) — VCD/DVE handle routing internally. CIO direct QC.
+            </div>
+          </div>
+
+          {/* ── Support Unit ── */}
+          <div style={{ animation: "slideUp 0.8s ease-out 0.8s backwards" }}>
+            <DivisionHeader title="Support Unit" icon="⚙" color={COLORS.teal} />
+            <AgentCard
+              title="Intel & Admin EA"
+              model="Gemini 2.0 Flash"
+              color={COLORS.teal}
+              role="Executive Assistant"
+              description="CIO 的眼睛和手。即時搜尋、報帳處理、行事曆管理、素材搜集。Google Workspace 深度整合。"
+            />
+            <Spacer />
+            <AgentCard
+              title="Chief Engineer"
+              model="Claude Opus / Sonnet"
+              color="#607d8b"
+              role="Digital Infrastructure"
+              description="Official website (miyamacap.com), automation scripts, API integrations, deployment. Tech Lead for all digital infrastructure."
+              tag="NEW"
+            />
+          </div>
+        </div>
+
+        {/* ═══ COST STRUCTURE ═══ */}
+        <div style={{
+          marginTop: 30, padding: 20,
+          background: "rgba(255,255,255,0.03)",
+          border: `1px solid ${COLORS.border}`,
+          borderRadius: 8,
+          animation: "fadeIn 1s ease-out 1s backwards",
+        }}>
+          <div
+            onClick={() => setShowCost(!showCost)}
+            style={{
+              display: "flex", justifyContent: "space-between", alignItems: "center",
+              cursor: "pointer", userSelect: "none",
+            }}
+          >
+            <div style={{
+              fontSize: 10, color: COLORS.textMuted, letterSpacing: 2, fontWeight: 600,
+            }}>
+              ▸ OPERATIONAL COST STRUCTURE
+            </div>
+            <span style={{ fontSize: 11, color: COLORS.textMuted }}>
+              {showCost ? "▲ HIDE" : "▼ SHOW"}
+            </span>
+          </div>
+
+          {showCost && (
+            <div style={{
+              marginTop: 16, display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
+              gap: 12, fontSize: 11,
+            }}>
+              {[
+                ["Macro Intelligence", "Gemini + o3-mini", "~$200/mo", COLORS.blue, "Core advantage"],
+                ["Editorial System", "Claude + ChatGPT", "~$150/mo", COLORS.purple, "3 markets, ~8 agents"],
+                ["Creative Production", "GPT-4 + Claude", "~$50/mo", COLORS.pink, "2 agents (D7 savings)"],
+                ["Operations & Support", "Mixed", "~$50/mo", COLORS.green, "CRO, CFO, EA, CE"],
+              ].map(([name, tech, cost, color, note]) => (
+                <div key={name} style={{
+                  padding: 12, background: `${color}12`,
+                  border: `1px solid ${color}40`, borderRadius: 6,
+                }}>
+                  <div style={{ color, fontWeight: 700, marginBottom: 6, fontSize: 12 }}>
+                    {name}
+                  </div>
+                  <div style={{ color: COLORS.textDim, lineHeight: 1.6 }}>
+                    {tech}<br />
+                    <strong style={{ color }}>{cost}</strong><br />
+                    <span style={{ fontSize: 10, color: "#2ecc71" }}>✓ {note}</span>
+                  </div>
+                </div>
+              ))}
+              <div style={{
+                padding: 12, background: `${COLORS.gold}12`,
+                border: `2px solid ${COLORS.gold}40`, borderRadius: 6,
+                display: "flex", flexDirection: "column", justifyContent: "center",
+              }}>
+                <div style={{ fontSize: 24, fontWeight: 700, color: COLORS.gold, textAlign: "center" }}>
+                  ~$450<span style={{ fontSize: 12, fontWeight: 400 }}>/mo</span>
+                </div>
+                <div style={{ fontSize: 10, color: COLORS.textMuted, textAlign: "center", marginTop: 4 }}>
+                  vs ~$25K traditional staffing
+                </div>
+                <div style={{
+                  fontSize: 20, color: "#2ecc71", textAlign: "center", marginTop: 4, fontWeight: 700,
+                }}>
+                  98% cost reduction
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
+
+        {/* ═══ FOOTER ═══ */}
+        <div style={{
+          marginTop: 40, textAlign: "center", padding: "20px 0",
+          borderTop: `1px solid ${COLORS.border}`,
+        }}>
+          <div style={{ fontSize: 11, color: COLORS.textMuted, lineHeight: 1.8 }}>
+            <span style={{ color: COLORS.gold }}>🏔️ Miyama Capital</span> · Quantmental Global Macro<br />
+            Cross-Asset Transmission · Fault-Tolerant Risk Architecture<br />
+            <span style={{ fontSize: 9, letterSpacing: 2 }}>
+              SYSTEMS OVER HACKING · 系統優於一次性努力
+            </span>
+          </div>
+          <div style={{
+            marginTop: 12, fontSize: 9, color: COLORS.textMuted,
+          }}>
+            v5.0 · Updated 2026-02-25 · Internal Use Only · 🔒 Password Protected
+          </div>
+        </div>
+
+      </div>
+    </div>
+  );
+}
