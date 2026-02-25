@@ -205,6 +205,7 @@
               <button data-cat="all" class="filter-btn active rounded-full px-4 py-1.5 text-xs font-medium border border-miyama-navy/20">All Topics</button>
               <button data-cat="macro" class="filter-btn rounded-full px-4 py-1.5 text-xs font-medium border border-miyama-navy/20">Macro Analysis</button>
               <button data-cat="framework" class="filter-btn rounded-full px-4 py-1.5 text-xs font-medium border border-miyama-navy/20">Frameworks</button>
+              <button data-cat="philosophy" class="filter-btn rounded-full px-4 py-1.5 text-xs font-medium border border-miyama-navy/20">Philosophy</button>
               <button data-cat="commentary" class="filter-btn rounded-full px-4 py-1.5 text-xs font-medium border border-miyama-navy/20">Market Commentary</button>
               <button data-cat="realestate" class="filter-btn rounded-full px-4 py-1.5 text-xs font-medium border border-miyama-navy/20">Real Estate</button>
               <button data-cat="meta" class="filter-btn rounded-full px-4 py-1.5 text-xs font-medium border border-miyama-navy/20">Company Updates</button>
@@ -237,7 +238,7 @@
 
       <p class="mt-1 text-xs text-gray-400">
         <span class="opacity-60">Contact:</span>
-        <a href="mailto:connect@miyamacap.com" class="underline underline-offset-2 hover:text-white">connect@miyamacap.com</a>
+        <a href="/cdn-cgi/l/email-protection#eb888485858e889fab8682928a868a888a9bc5888486" class="underline underline-offset-2 hover:text-white"><span class="__cf_email__" data-cfemail="92f1fdfcfcf7f1e6d2fffbebf3fff3f1f3e2bcf1fdff">[email&#160;protected]</span></a>
       </p>
 
       <div class="mt-5 flex flex-col items-center gap-4">
@@ -270,7 +271,7 @@
     </footer>
 
     <!-- Schema.org -->
-    <script type="application/ld+json">
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "CollectionPage",
@@ -311,6 +312,7 @@
       var categoryNames = {
         macro: "Macro Analysis",
         framework: "Frameworks",
+        philosophy: "Philosophy",
         commentary: "Market Commentary",
         realestate: "Real Estate",
         meta: "Company Updates"
@@ -468,17 +470,4 @@
         if (pageBtn) {
           currentPage = parseInt(pageBtn.dataset.page, 10);
           render();
-          window.scrollTo({ top: 0, behavior: "smooth" });
-          return;
-        }
-      });
-
-      // Handle browser back/forward
-      window.addEventListener("popstate", function () {
-        readURLParams();
-        render();
-      });
-    })();
-    </script>
-  </body>
-</html>
+          window.scrollTo({ top: 0, beh

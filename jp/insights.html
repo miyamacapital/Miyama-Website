@@ -181,6 +181,7 @@
               <button data-cat="all" class="filter-btn active rounded-full px-4 py-1.5 text-xs font-medium border border-miyama-navy/20">すべてのトピック</button>
               <button data-cat="macro" class="filter-btn rounded-full px-4 py-1.5 text-xs font-medium border border-miyama-navy/20">マクロ分析</button>
               <button data-cat="framework" class="filter-btn rounded-full px-4 py-1.5 text-xs font-medium border border-miyama-navy/20">フレームワーク</button>
+              <button data-cat="philosophy" class="filter-btn rounded-full px-4 py-1.5 text-xs font-medium border border-miyama-navy/20">投資哲学</button>
               <button data-cat="commentary" class="filter-btn rounded-full px-4 py-1.5 text-xs font-medium border border-miyama-navy/20">マーケット解説</button>
               <button data-cat="realestate" class="filter-btn rounded-full px-4 py-1.5 text-xs font-medium border border-miyama-navy/20">不動産</button>
               <button data-cat="meta" class="filter-btn rounded-full px-4 py-1.5 text-xs font-medium border border-miyama-navy/20">会社情報</button>
@@ -206,7 +207,7 @@
 
       <p class="mt-1 text-xs text-gray-400">
         <span class="opacity-60">お問い合わせ：</span>
-        <a href="mailto:connect@miyamacap.com" class="underline underline-offset-2 hover:text-white">connect@miyamacap.com</a>
+        <a href="/cdn-cgi/l/email-protection#8fece0e1e1eaecfbcfe2e6f6eee2eeeceeffa1ece0e2" class="underline underline-offset-2 hover:text-white"><span class="__cf_email__" data-cfemail="d4b7bbbabab1b7a094b9bdadb5b9b5b7b5a4fab7bbb9">[email&#160;protected]</span></a>
       </p>
 
       <div class="mt-5 flex flex-col items-center gap-4">
@@ -236,7 +237,7 @@
     </footer>
 
     <!-- Schema.org -->
-    <script type="application/ld+json">
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "CollectionPage",
@@ -264,7 +265,7 @@
       var articles = [];
 
       var platformNames = { vocus: "方格子", substack: "Substack", note: "Note.com", linkedin: "LinkedIn" };
-      var categoryNames = { macro: "マクロ分析", framework: "フレームワーク", commentary: "マーケット解説", realestate: "不動産", meta: "会社情報" };
+      var categoryNames = { macro: "マクロ分析", framework: "フレームワーク", philosophy: "投資哲学", commentary: "マーケット解説", realestate: "不動産", meta: "会社情報" };
       var langLabels = { "zh-TW": "🇹🇼 繁中", en: "🇺🇸 EN", ja: "🇯🇵 JP" };
       var ctaText = { "zh-TW": "閱讀全文 →", en: "Read more →", ja: "続きを読む →" };
 
@@ -366,11 +367,4 @@
         var catBtn = e.target.closest("[data-cat]");
         if (catBtn) { currentCat = catBtn.dataset.cat; currentPage = 1; render(); return; }
         var pageBtn = e.target.closest("[data-page]");
-        if (pageBtn) { currentPage = parseInt(pageBtn.dataset.page, 10); render(); window.scrollTo({ top: 0, behavior: "smooth" }); }
-      });
-
-      window.addEventListener("popstate", function () { readURLParams(); render(); });
-    })();
-    </script>
-  </body>
-</html>
+        if (pageBtn) { curr
