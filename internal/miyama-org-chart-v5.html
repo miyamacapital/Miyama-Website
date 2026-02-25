@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex, nofollow" />
-  <title>Miyama Capital — AI Agent Command Structure v5.0</title>
+  <title>Miyama Capital — AI Agent Command Structure v5.1</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600;700&display=swap" rel="stylesheet" />
@@ -31,8 +31,10 @@
     const { useState } = React;
 
     // ═══════════════════════════════════════════════════════════════
-    // Miyama Capital — AI Agent Command Structure v5.0
+    // Miyama Capital — AI Agent Command Structure v5.1
     // Updated: 2026-02-25
+    // Changes from v5.0: CFO/Controller merged into EA + Marina (human),
+    //          EA description updated with financial ops, agent count ~14
     // ═══════════════════════════════════════════════════════════════
 
     const COLORS = {
@@ -179,7 +181,7 @@
                 fontSize: 12, letterSpacing: 4, color: COLORS.gold,
                 marginBottom: 8, textTransform: "uppercase", fontWeight: 300,
               }}>
-                AI Agent Command Structure v5.0
+                AI Agent Command Structure v5.1
               </div>
               <h1 style={{
                 fontSize: 42, fontWeight: 700, color: "#fff",
@@ -202,7 +204,7 @@
                 flexWrap: "wrap",
               }}>
                 {[
-                  ["~15", "Active Agents"],
+                  ["~14", "Active Agents"],
                   ["3", "Markets (US/TW/JP)"],
                   ["6", "Divisions"],
                   ["3", "Languages"],
@@ -319,14 +321,20 @@
                   role="Kill Switch Authority"
                   description="Rigorous logical reasoning to find blind spots. Verdict: Kill/Pass on investment ideas & high-risk content. Owns Fault-Tolerant Risk Framework."
                 />
-                <Spacer />
-                <AgentCard
-                  title="CFO / Controller"
-                  model="Gemini 2.0 Flash"
-                  color="#1e8449"
-                  role="Financial Plumbing"
-                  description="Lightning-fast document processing. Tracks capital flows, invoices, compliance. QuickBooks integration. Lowest cost per task."
-                />
+                <Spacer h={6} />
+                <div style={{
+                  padding: 10, background: "rgba(39,174,96,0.08)",
+                  border: "1px solid rgba(39,174,96,0.3)", borderRadius: 4,
+                }}>
+                  <div style={{ fontSize: 9, color: "#2ecc71", letterSpacing: 1, fontWeight: 700, marginBottom: 6 }}>
+                    📋 FINANCIAL OPS — HUMAN-LED
+                  </div>
+                  <div style={{ fontSize: 10, color: COLORS.textMuted, lineHeight: 1.6 }}>
+                    <span style={{ color: "#2ecc71" }}>Marina Wang</span> (CPA/CFP, SkyLantern) — Tax strategy, compliance, financial planning<br />
+                    <span style={{ color: "#2ecc71" }}>EA Agent</span> — Bookkeeping support, invoice processing, QuickBooks ops<br />
+                    <span style={{ fontSize: 9, fontStyle: "italic" }}>Former CFO/Controller agent merged — human advisor + EA now covers scope</span>
+                  </div>
+                </div>
               </div>
 
               {/* ── Editorial Production (spans full width) ── */}
@@ -496,8 +504,8 @@
                   title="Intel & Admin EA"
                   model="Gemini 2.0 Flash"
                   color={COLORS.teal}
-                  role="Executive Assistant"
-                  description="CIO 的眼睛和手。即時搜尋、報帳處理、行事曆管理、素材搜集。Google Workspace 深度整合。"
+                  role="Executive Assistant + Financial Ops"
+                  description="CIO 的眼睛和手。即時搜尋、報帳處理、行事曆管理、素材搜集。Google Workspace 深度整合。兼任 bookkeeping 支援：發票處理、QuickBooks 操作、費用追蹤。"
                 />
                 <Spacer />
                 <AgentCard
@@ -546,7 +554,7 @@
                     ["Macro Intelligence", "Gemini + o3-mini", "~$200/mo", COLORS.blue, "Core advantage"],
                     ["Editorial System", "Claude + ChatGPT", "~$150/mo", COLORS.purple, "3 markets, ~8 agents"],
                     ["Creative Production", "GPT-4 + Claude", "~$50/mo", COLORS.pink, "2 agents (D7 savings)"],
-                    ["Operations & Support", "Mixed", "~$50/mo", COLORS.green, "CRO, CFO, EA, CE"],
+                    ["Operations & Support", "Mixed", "~$50/mo", COLORS.green, "CRO, EA, CE + Marina (human)"],
                   ].map(([name, tech, cost, color, note]) => (
                     <div key={name} style={{
                       padding: 12, background: `${color}12`,
@@ -598,7 +606,7 @@
               <div style={{
                 marginTop: 12, fontSize: 9, color: COLORS.textMuted,
               }}>
-                v5.0 · Updated 2026-02-25 · Internal Use Only · 🔒 Password Protected
+                v5.1 · Updated 2026-02-25 · Internal Use Only · 🔒 Password Protected
               </div>
             </div>
 
