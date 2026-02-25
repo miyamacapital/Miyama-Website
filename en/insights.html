@@ -470,4 +470,11 @@
         if (pageBtn) {
           currentPage = parseInt(pageBtn.dataset.page, 10);
           render();
-          window.scrollTo({ top: 0, beh
+          window.scrollTo({ top: 0, behavior: "smooth" }); }
+      });
+
+      window.addEventListener("popstate", function () { readURLParams(); render(); });
+    })();
+    </script>
+  </body>
+</html>
