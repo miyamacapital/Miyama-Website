@@ -268,7 +268,7 @@
       var langLabels = { "zh-TW": "🇹🇼 繁中", en: "🇺🇸 EN", ja: "🇯🇵 JP" };
       var ctaText = { "zh-TW": "閱讀全文 →", en: "Read more →", ja: "続きを読む →" };
 
-      fetch("../data/articles.json")
+      fetch("/data/articles.json")
         .then(function (r) { return r.json(); })
         .then(function (data) {
           articles = data.sort(function (a, b) {
