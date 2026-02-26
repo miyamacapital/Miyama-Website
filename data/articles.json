@@ -262,5 +262,17 @@
     "platform": "vocus",
     "tags": ["貨幣擴張", "相對排名", "散戶優勢", "投資哲學", "認知地基"],
     "featured": true
+  },
+  {
+  "id": "art-032",
+  "title": "為什麼我不再選股：從 2D 的股票交易者到 3D 的資本設計者",
+  "date": "2026-01-31",
+  "lang": "zh-TW",
+  "category": "philosophy",
+  "summary": "大多數投資人在 2D 平面上預測價格，真正的資本配置者在 3D 空間裡設計系統。三個被忽略的 Z 軸——槓桿與資金成本、稅務結構、認知頻寬——如何改變長期報酬的數量級。",
+  "url": "https://vocus.cc/article/697dd250fd89780001547da9",
+  "platform": "vocus",
+  "tags": ["選股", "資本配置", "系統設計", "認知頻寬", "投資哲學"],
+  "featured": true
   }
 ]
