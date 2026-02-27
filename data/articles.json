@@ -60,30 +60,6 @@
     "featured": false
   },
   {
-    "id": "art-006",
-    "title": "美國就業市場的「不死鳥」傳奇：從 13 萬新增就業看懂經濟的真實體溫",
-    "date": "2026-02-11",
-    "lang": "zh-TW",
-    "category": "macro",
-    "summary": "解讀非農 13 萬新增就業的表面數字與深層結構——勞動參與率、兼職轉正職比例、薪資增速等指標如何呈現經濟的真實溫度，以及對聯準會決策的影響。",
-    "url": "https://vocus.cc/article/67ab9c16fd89780001d42c0d",
-    "platform": "vocus",
-    "tags": ["非農就業", "勞動市場", "經濟指標", "聯準會"],
-    "featured": false
-  },
-  {
-    "id": "art-009",
-    "title": "因子動能更新 Factor Momentum Update_Feb 2026",
-    "date": "2026-02-08",
-    "lang": "zh-TW",
-    "category": "commentary",
-    "summary": "2026 年 2 月因子動能定期更新：追蹤價值、動能、品質、規模等因子的相對表現與輪動訊號，為跨資產配置提供量化參考依據。",
-    "url": "https://vocus.cc/article/67a70f3cfd89780001d0e4d9",
-    "platform": "vocus",
-    "tags": ["因子投資", "動能", "量化", "定期更新"],
-    "featured": false
-  },
-  {
     "id": "art-011",
     "title": "槓鈴策略的真正用法：投資、工作與人生的 90/10 法則",
     "date": "2026-02-04",
@@ -96,18 +72,6 @@
     "featured": false
   },
   {
-    "id": "art-012",
-    "title": "投資心態十年轉變：從追逐刺激到擁抱簡單，指數化投資的智慧",
-    "date": "2026-02-04",
-    "lang": "zh-TW",
-    "category": "framework",
-    "summary": "十年投資心態的真實轉變歷程——從追逐個股刺激到擁抱指數化投資的簡單智慧。為什麼「少做」往往是最難但最有效的投資策略。",
-    "url": "https://vocus.cc/article/67a1cd04fd89780001ccd633",
-    "platform": "vocus",
-    "tags": ["指數化投資", "投資心態", "簡單", "長期投資"],
-    "featured": false
-  },
-  {
     "id": "art-016",
     "title": "Building Anti-Fragile：一個能在 Regime Shift 中自我修正的投資系統",
     "date": "2026-01-24",
@@ -117,7 +81,7 @@
     "url": "https://vocus.cc/article/6974979efd89780001e736de",
     "platform": "vocus",
     "tags": ["反脆弱", "Regime Shift", "系統設計", "投資框架", "投資哲學"],
-    "featured": true
+    "featured": false
   },
   {
     "id": "art-017",
@@ -153,7 +117,7 @@
     "url": "https://vocus.cc/article/693a8c81fd89780001995955",
     "platform": "vocus",
     "tags": ["動態水位管理", "底倉", "投資紀律", "風險控管", "投資哲學"],
-    "featured": true
+    "featured": false
   },
   {
     "id": "art-020",
@@ -165,7 +129,7 @@
     "url": "https://vocus.cc/article/693549c3fd89780001be2f23",
     "platform": "vocus",
     "tags": ["投資進化", "基本面", "情緒", "認知升級", "投資哲學"],
-    "featured": false
+    "featured": true
   },
   {
     "id": "art-021",
@@ -177,7 +141,7 @@
     "url": "https://vocus.cc/article/6931fee3fd89780001e428a9",
     "platform": "vocus",
     "tags": ["自我認知", "投資哲學", "心理", "投資心態"],
-    "featured": false
+    "featured": true
   },
   {
     "id": "art-022",
@@ -201,7 +165,7 @@
     "url": "https://vocus.cc/article/69418e27fd897800010f08cb",
     "platform": "vocus",
     "tags": ["左側交易", "散戶", "機構", "不對稱優勢", "投資哲學"],
-    "featured": false
+    "featured": true
   },
   {
     "id": "art-024",
@@ -225,7 +189,7 @@
     "url": "https://vocus.cc/article/69550d80fd897800017a39e9",
     "platform": "vocus",
     "tags": ["時間套利", "散戶優勢", "華爾街", "長期持有", "投資哲學"],
-    "featured": false
+    "featured": true
   },
   {
     "id": "art-026",
@@ -249,7 +213,7 @@
     "url": "https://vocus.cc/article/69553c60fd8978000189bc23",
     "platform": "vocus",
     "tags": ["德州撲克", "期望值", "馬斯克", "風險管理", "投資哲學"],
-    "featured": false
+    "featured": true
   },
   {
     "id": "art-028",
@@ -286,5 +250,29 @@
     "platform": "vocus",
     "tags": ["自有資金", "囚徒困境", "格陵蘭", "結構性優勢", "投資哲學"],
     "featured": false
+  },
+  {
+    "id": "art-031",
+    "title": "如果從頭來過，我會怎麼學投資",
+    "date": "2026-02-26",
+    "lang": "zh-TW",
+    "category": "philosophy",
+    "summary": "在買第一股 ETF 之前，你應該先知道的三件事：貨幣擴張是系統內建的結構、財富的意義取決於相對排名而非絕對數字、散戶唯一的結構性優勢是不必被迫賣出。三條路徑，三種代價。",
+    "url": "https://vocus.cc/article/69a04e9afd897800013b9eb9",
+    "platform": "vocus",
+    "tags": ["貨幣擴張", "相對排名", "散戶優勢", "投資哲學", "認知地基"],
+    "featured": true
+  },
+  {
+  "id": "art-032",
+  "title": "為什麼我不再選股：從 2D 的股票交易者到 3D 的資本設計者",
+  "date": "2026-01-31",
+  "lang": "zh-TW",
+  "category": "philosophy",
+  "summary": "大多數投資人在 2D 平面上預測價格，真正的資本配置者在 3D 空間裡設計系統。三個被忽略的 Z 軸——槓桿與資金成本、稅務結構、認知頻寬——如何改變長期報酬的數量級。",
+  "url": "https://vocus.cc/article/697dd250fd89780001547da9",
+  "platform": "vocus",
+  "tags": ["選股", "資本配置", "系統設計", "認知頻寬", "投資哲學"],
+  "featured": true
   }
 ]
